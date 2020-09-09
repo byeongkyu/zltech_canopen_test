@@ -31,13 +31,9 @@ class ControlNode
     private:
         void callback(const ros::TimerEvent& event)
         {
-            ros::Time start_time = ros::Time::now();
-
             robot_hw->read(ros::Time::now(), period);
             cm->update(ros::Time::now(), period);
             robot_hw->write(ros::Time::now(), period);
-
-            ROS_INFO("%f", (ros::Time::now() - start_time).toSec());
         }
 
     private:

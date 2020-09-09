@@ -26,13 +26,13 @@ bool MotorDriverZLAC8015CANOpenInterface::init(ros::NodeHandle& nh, ros::NodeHan
     ros::Duration(0.1).sleep();
 
     // Acceleration Time 200ms
-    SDODownload(1, 0x6083, 0x0, 100, 4);
-    SDODownload(2, 0x6083, 0x0, 100, 4);
+    SDODownload(1, 0x6083, 0x0, 50, 4);
+    SDODownload(2, 0x6083, 0x0, 50, 4);
     ros::Duration(0.1).sleep();
 
     // Decceleration Time 200ms
-    SDODownload(1, 0x6084, 0x0, 100, 4);
-    SDODownload(2, 0x6084, 0x0, 100, 4);
+    SDODownload(1, 0x6084, 0x0, 50, 4);
+    SDODownload(2, 0x6084, 0x0, 50, 4);
     ros::Duration(0.1).sleep();
 
     //

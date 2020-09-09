@@ -1,0 +1,6 @@
+<launch>
+    <node name="k3_mobile_hw_node" type="k3_mobile_hw_node" pkg="k3_mobile_hw" output="screen">
+        <param name="rate" value="50"/>
+    </node>
+    <include file="$(find k3_mobile_control)/launch/bringup_controllers.launch"/>
+</launch>
